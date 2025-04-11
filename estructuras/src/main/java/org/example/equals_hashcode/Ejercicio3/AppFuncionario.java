@@ -28,9 +28,8 @@ public class AppFuncionario {
         pilaInformes.push(new Informe(2, Tipo.PERSONAL, "Blabla7"));
         pilaInformes.push(new Informe(3, Tipo.EMPRESARIAL, "Blabla8"));
 
-        while (!pilaInformes.isEmpty()) {
-            System.out.println("Sale ahora: " + pilaInformes.peek());
-            Informe.quitarTarea(pilaInformes.pop());
+        for (int i = pilaInformes.size()-1; i >= 0 ; i--) {
+            System.out.println(pilaInformes.get(i));
         }
 
         Informe.getNumTareas();
